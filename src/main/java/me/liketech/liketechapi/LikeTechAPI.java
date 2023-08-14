@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public final class LikeTechAPI extends JavaPlugin {
 
-    public static final String VERSION_NUMBER = "EXPERIMENTAL";
+    public static final String VERSION_NUMBER = "1.0";
 
     private static LikeTechAPI plugin;
 
@@ -16,7 +16,6 @@ public final class LikeTechAPI extends JavaPlugin {
         plugin = this;
 
         getLogger().info("Using LikeTechAPI v" + VERSION_NUMBER + "!");
-        getLogger().severe("You are using an experimental version of the LikeTechAPI, which is not supported.");
 
         test();
     }
@@ -33,7 +32,7 @@ public final class LikeTechAPI extends JavaPlugin {
 
     private void test(){
         Objects.requireNonNull(getCommand("liketechapi")).setExecutor((sender, cmd, s, args) -> {
-            sender.sendMessage(ChatUtilities.translateColor("&aThis server is running LikeTechAPI version &c" + VERSION_NUMBER + "&a! Support will not be provided for this version!"));
+            sender.sendMessage(ChatUtilities.translateColor("&aThis server is running LikeTechAPI version &e" + VERSION_NUMBER + "&a!"));
             return false;
         });
     }
