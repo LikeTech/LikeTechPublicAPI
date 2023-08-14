@@ -1,10 +1,13 @@
 package me.liketech.liketechapi;
 
+import me.liketech.liketechapi.API.ChatColor.ChatUtilities;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class LikeTechAPI extends JavaPlugin {
 
-    public static final String VERSION_NUMBER = "1.0";
+    public static final String VERSION_NUMBER = "EXPERIMENTAL";
 
     private static LikeTechAPI plugin;
 
@@ -14,6 +17,8 @@ public final class LikeTechAPI extends JavaPlugin {
 
         getLogger().info("Using LikeTechAPI v" + VERSION_NUMBER + "!");
         getLogger().severe("You are using an experimental version of the LikeTechAPI, which is not supported.");
+
+        test();
     }
 
     @Override
@@ -24,5 +29,12 @@ public final class LikeTechAPI extends JavaPlugin {
 
     public static LikeTechAPI getPlugin(){
         return plugin;
+    }
+
+    private void test(){
+        Objects.requireNonNull(getCommand("liketechapi")).setExecutor((sender, cmd, s, args) -> {
+            sender.sendMessage(ChatUtilities.translateColor("&aThis server is running LikeTechAPI version &c" + VERSION_NUMBER + "&a! Support will not be provided for this version!"));
+            return false;
+        });
     }
 }
