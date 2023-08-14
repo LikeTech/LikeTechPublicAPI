@@ -1,0 +1,4 @@
+name: LikeTechAPI
+version: '${project.version}'
+main: me.liketech.liketechapi.LikeTechAPI
+api-version: '1.20'
