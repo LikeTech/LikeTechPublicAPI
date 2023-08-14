@@ -13,6 +13,7 @@ public final class LikeTechAPI extends JavaPlugin {
         plugin = this;
 
         getLogger().info("Using LikeTechAPI v" + VERSION_NUMBER + "!");
+        getLogger().severe("You are using an experimental version of the API, which is not supported.");
     }
 
     @Override
