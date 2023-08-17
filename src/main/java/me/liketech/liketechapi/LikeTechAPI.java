@@ -33,7 +33,7 @@ public final class LikeTechAPI extends JavaPlugin {
     private void test(){
         Objects.requireNonNull(getCommand("liketechapi")).setExecutor((sender, cmd, s, args) -> {
             sender.sendMessage(ChatUtilities.translateColor("&aThis server is running LikeTechAPI version &e" + VERSION_NUMBER + "&a!"));
-            return true;
+            return false;
         });
     }
 }
